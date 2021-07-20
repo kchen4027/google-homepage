@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang = "en">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+<head>
+    
+<style>
+    html{
+        overflow-x: hidden;
+    }
+    li.right-side{
+        margin-top: -17px;
+        float: right;
+    }
+    li.left-side {
+        float:left;
+    }
+
+    input{
+        font-size: 20px;
+        width: 500px;
+        border: 0;
+        background: transparent;
+        outline: none;
+    }
+
+    .hero{
+        width: 100%;
+        height: 35vh;
+        display: flex;
+        justify-content:center;
+        position: relative;
+        align-items: center;
+        flex-direction:column;
+    }
+
+    #centeringicon {
+        text-align: center;
+        object-position:bottom-middle;
+        object-fit:contain;
+    }
+
+    #searchBox{
+        border-radius: 55px;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), 
+        -6px -6px 10px -1px rgba(255,255,255,-0.7);
+        margin-bottom: 2.2em;
+        
+
+    }
+
+    #searchIcon{
+        width: 50px;
+        cursor: pointer;
+    }
+
+    #micIcon{
+        width: 30px;
+    }
+
+    
+    #accountdim {
+        color: rgb(95, 99, 104);
+        cursor: pointer;
+        opacity: 1;
+        font-size: 32px;
+        margin-top: 3px;
+        margin-right: 5px;
+    }
+
+    #appsdim {
+        color: rgb(95, 99, 104);
+        cursor: pointer;
+        opacity: 1;
+        font-size: 24px;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .main-nav:hover{
+        background-color: #eff0f1
+    }
+
+    .container {
+        display: flex; 
+    }
+
+    .container button:first-child {
+        background-color: #f8f9fa;
+        flex-grow: 1;
+        cursor: pointer;
+        padding: 5px 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+        color: #3c4043;
+        font-family: Roboto,arial,sans-serif;
+        font-size: 14px;
+    }
+
+    .container button:last-child{
+        background-color: #f8f9fa;
+        flex-grow: 1;
+        cursor: pointer;
+        padding: 5px 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        border: 1px solid #f8f9fa;
+        border-radius: 4px;
+        color: #3c4043;
+        font-family: Roboto,arial,sans-serif;
+        font-size: 14px;
+    }
+
+    .container button:hover{
+        border: 1px solid rgba(0,0,0.226);
+        
+        border-radius: 5px;
+    }
+
+    #footer-content {
+        display: grid;
+        grid-template-columns: 100px 100px 150px 1fr 70px 70px 70px;
+        grid-template-rows: 50px;
+        grid-template-areas: "advertising business howsearchworks . privacy terms settings";
+        background: #eeeeee;
+        bottom: 0;
+        position:absolute;
+        height: 8vh;
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    #business {
+        grid-area:business;
+        justify-self:center;
+        align-self: center;
+    }
+    #advertising {
+        grid-area:advertising;
+        justify-self:center;
+        align-self: center;
+    }
+    #howsearchworks {
+        grid-area:howsearchworks;
+        justify-self:center;
+        align-self: center;
+    }
+    #privacy {
+        grid-area:privacy;
+        justify-self:center;
+        align-self: center;
+    }
+    #terms {
+        grid-area:terms;
+        justify-self:center;
+        align-self: center;
+    }
+    #settings {
+        grid-area:settings;
+        justify-self:center;
+        align-self: center;
+    }
+
+    #carbonneutral{
+        margin-left: -9em;
+    }
+</style>
+<div id="navbar">
+    <ul class = 'navbar'>
+        <li class = "left-side">
+            <a href="About.asp">About</a>
+            &nbsp
+            <a href="Store.asp">Store</a>
+            
+        </li>
+
+        <li class = "right-side">
+            <a href="Gmail.asp">Gmail</a>
+            &nbsp
+            <a href="Images.asp">Images</a>
+            &nbsp
+            &nbsp
+            <i class="material-icons" id="appsdim">
+                apps
+            </i>
+            &nbsp
+            &nbsp
+            <i class="material-icons" id="accountdim">
+                account_circle
+            </i>
+
+            
+        </li>
+    </ul>
+</div>
+</head>
+<body>
+    
+    
+
+    <div class="hero">
+        <div id="centeringicon">
+            <img src = "https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Icon" >
+        </div>
+        
+
+        <div id="searchBox">
+            <span class="material-icons" id="searchIcon">search</span>
+            <input type="text">
+            <span class="material-icons" id="micIcon">mic</span>
+        </div>
+
+        <div class="container">
+            <button>
+                Google Search
+            </button>
+            <button>
+                I'm Feeling Lucky
+            </button>
+        </div>
+
+        
+    
+        
+    </div>
+
+    
+    <div id="footer-content">
+        <a href="a" id="advertising">Advertising</a>
+        <a href="a" id="business">Business</a>
+        <a href="a" id="howsearchworks">How Search works</a>
+        <div id="middle">
+            <a href="a" id="carbonneutral">Carbon neutral since 2007</a>
+        </div>
+        <a href="a" id="privacy">Privacy</a>
+        <a href="a" id="terms">Terms</a>
+        <a href="a" id="settings">Settings</a>
+    </div>
+
+    
+    
+    
+
+</body>
+</html>
